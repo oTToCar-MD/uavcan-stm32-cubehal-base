@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug (J-Link)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/debug/???.elf",
+            "serverpath": "JLinkGDBServer",
+            "servertype": "jlink",
+            "device": "???",
+            "interface": "swd",
+            "runToMain": true
+        },
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug (J-Link, RTOS-aware)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/debug/???.elf",
+            "serverpath": "JLinkGDBServer",
+            "servertype": "jlink",
+            "device": "???",
+            "interface": "swd",
+            "rtos": "FreeRTOS"
+        },
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug (ST-LINK)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/debug/???.elf",
+            "servertype": "stutil",
+            "device": "???",
+            "runToMain": true
+        }
+    ]
+}

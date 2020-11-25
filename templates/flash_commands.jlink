@@ -1,0 +1,5 @@
+r
+loadbin build/release/???.bin,0x0
+r
+g
+exit

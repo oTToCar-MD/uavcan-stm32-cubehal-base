@@ -1,0 +1,61 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "type": "shell",
+    "command": "make",
+    "args": [
+        "-j8"
+    ],
+    "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+    },
+    "tasks": [
+        {
+            "label": "Clean all",
+            "args": [
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build firmware (Debug)",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build firmware (Release)",
+            "args": [
+                "RELEASE=1",
+                "RELEASE_OPT=3"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build firmware (Release, size-optimized)",
+            "args": [
+                "RELEASE=1",
+                "RELEASE_OPT=s"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

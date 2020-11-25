@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/dsdlc_generated",
+                "${workspaceFolder}/bus-node-base/inc",
+                "${workspaceFolder}/bus-node-base/libuavcan/libuavcan/include",
+                "${workspaceFolder}/bus-node-base/uavcan_platform_specific_components/stm32/libuavcan/driver/include",
+                "${workspaceFolder}/bus-node-base/libopencm3/include"
+            ],
+            "defines": [
+                "${STM32_FAMILY}",
+                "UAVCAN_CPP_VERSION=UAVCAN_CPP11"
+            ],
+            "compilerPath": "arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

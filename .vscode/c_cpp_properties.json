@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/libuavcan/libuavcan/include",
+                "${workspaceFolder}/libuavcan_stm32/driver/include",
+                "${workspaceFolder}/libopencm3/include",
+                "${workspaceFolder}/STM32F4xx_DSP_StdPeriph_Lib_V1.8.0/CMSIS/Include",
+                "${workspaceFolder}/STM32F4xx_DSP_StdPeriph_Lib_V1.8.0/STM32F4xx_StdPeriph_Driver/inc",
+                "${workspaceFolder}/STM32F10x_StdPeriph_Lib_V3.5.0/CMSIS/CM3/CoreSupport",
+                "${workspaceFolder}/STM32F10x_StdPeriph_Lib_V3.5.0/CMSIS/CM3/DeviceSupport",
+                "${workspaceFolder}/STM32F10x_StdPeriph_Lib_V3.5.0/STM32F10x_StdPeriph_Driver/inc",
+                "/usr/include/newlib"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

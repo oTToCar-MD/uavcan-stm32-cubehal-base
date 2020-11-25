@@ -1,0 +1,18 @@
+#
+# Gets additional information about the firmware build.
+#
+
+---
+
+void6
+bool is_dirty
+bool is_debug
+
+# Git SHA-1 commit hash as a string (including null terminator)
+# Note the use of the <= sign even if the commit hash is always the same size. The string setter
+# fill fail to compile for fixed-size arrays.
+uint8[<=40] commit_hash
+
+uint8[<=32] branch_name
+
+uint8[<=32] build_time
