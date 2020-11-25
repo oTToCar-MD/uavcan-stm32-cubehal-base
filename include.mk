@@ -16,8 +16,8 @@ OBJDIR		:= $(OUTPUT_DIR)/obj
 
 INCDIRS		+= \
 $(BASEDIR)inc \
-$(BASEDIR)inc/bus-node-base \
-$(BASEDIR)inc/bus-node-base/internal \
+$(BASEDIR)inc/uavcan-stm32-cubehal-base \
+$(BASEDIR)inc/uavcan-stm32-cubehal-base/internal \
 $(BASEDIR)chip \
 
 SOURCES		+= \
@@ -32,7 +32,6 @@ $(BASEDIR)src/unique_id.cpp
 UAVCAN_STM32_NUM_IFACES	?= 1
 UAVCAN_MEMPOOL_SIZE ?= 16384
 UAVCAN_RX_QUEUE_SIZE ?= 128
-TRACEALYZER_SUPPORT ?= 1
 
 ifndef UAVCAN_STM32_TIMER_NUMBER
 $(error UAVCAN_STM32_TIMER_NUMBER muste be set)
@@ -63,12 +62,12 @@ include $(BASEDIR)libuavcan/libuavcan/include.mk
 SOURCES += $(LIBUAVCAN_SRC)
 INCDIRS += $(LIBUAVCAN_INC)
 
-include $(BASEDIR)uavcan_platform_specific_components/stm32/libuavcan/driver/include.mk
+include $(BASEDIR)platform_specific_components/stm32/libuavcan/driver/include.mk
 SOURCES += $(LIBUAVCAN_STM32_SRC)
 INCDIRS += $(LIBUAVCAN_STM32_INC)
 
 $(info $(shell $(LIBUAVCAN_DSDLC) $(BASEDIR)/libuavcan/dsdl/uavcan))
-$(info $(shell $(LIBUAVCAN_DSDLC) $(BASEDIR)/uavcan_datatypes/ottocar))
+$(info $(shell $(LIBUAVCAN_DSDLC) $(BASEDIR)/custom_datatypes/ottocar))
 INCDIRS += dsdlc_generated
 
 # CubeMX

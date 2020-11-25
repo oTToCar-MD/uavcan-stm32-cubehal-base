@@ -4,10 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/dsdlc_generated",
-                "${workspaceFolder}/bus-node-base/inc",
-                "${workspaceFolder}/bus-node-base/libuavcan/libuavcan/include",
-                "${workspaceFolder}/bus-node-base/uavcan_platform_specific_components/stm32/libuavcan/driver/include",
-                "${workspaceFolder}/bus-node-base/libopencm3/include"
+                "${workspaceFolder}/uavcan-stm32-cubehal-base/inc",
+                "${workspaceFolder}/uavcan-stm32-cubehal-base/libuavcan/libuavcan/include",
+                "${workspaceFolder}/uavcan-stm32-cubehal-base/uavcan_platform_specific_components/stm32/libuavcan/driver/include",
             ],
             "defines": [
                 "${STM32_FAMILY}",
