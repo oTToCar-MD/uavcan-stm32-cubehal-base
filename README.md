@@ -328,5 +328,8 @@ uavcan-stm32-cubehal-base requires 3 different timers for the following componen
             });
   ```
 
+* **Custom Datatypes**
+  Add files to the custom_datatypes folder. Read up on how to write DSDL files on the uavcan legacy page.
+
 
 See [AN4013](https://www.st.com/resource/en/application_note/dm00042534-stm32-crossseries-timer-overview-stmicroelectronics.pdf) for an overview of the various kinds of timers used in STM32 microcontrollers and specific timer numbers and types in the device families.
